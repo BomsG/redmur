@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: black;
+}
+
+.home {
+  background-image: url("/public/images/home.png");
+  background-position: center;
+  background-size: cover;
+}
