@@ -42,7 +42,7 @@ const page = () => {
   return (
     <>
       <div>
-        <div className='text-white relative z-50'>
+        <div className='text-white relative z-50 overflow-hidden'>
           <Header isScrolled={isScrolled} />
           <HomeCompt
             backgroundImage={moji}
@@ -62,7 +62,7 @@ const page = () => {
               btn2='JOIN WAITLIST'
             />
           </Link>
-          <Link href='/About'>
+          <Link href='/About' className='hero'>
             <HomeCompt
               backgroundImage={About}
               name='ABOUT US'
@@ -73,12 +73,14 @@ const page = () => {
             />
           </Link>
         </div>
-        <div className='hero px-[8rem] py-20 bg-black text-white flex justify-center w-full'>
+        <div className='px-[6px] md:px-[8rem] py-20 bg-black text-white flex justify-center w-full'>
           <div>
-            <div className='flex justify-between items-center py-20'>
-              <div className='font-mono'>
-                <h1 className='text-[2.5rem] font-bold mb-10 '>Imagination Knows no bounds.</h1>
-                <p className='text-lg leading-7'>
+            <div className='flex flex-col md:flex-row justify-between items-center sm:py-20 mb-20'>
+              <div className='font-mono md:w-[46%]'>
+                <h1 className='text-[18px] sm:text-[2.5rem] font-bold mb-10 text-center md:text-left '>
+                  Imagination Knows no bounds.
+                </h1>
+                <p className='w-full text-[12px] text-lg leading-7 text-center md:text-left'>
                   With our virtual humans, we redefine brand engagement and storytelling where every
                   interaction sparks excitement, and where innovation is at its peak!
                 </p>
@@ -86,25 +88,31 @@ const page = () => {
                   <span className='text-3xl'>M</span>ore
                 </p>
               </div>
-              <Image src={imagine} alt='image' />
+              <div className='md:w-[46%] mt-8 sm:mt-0'>
+                <Image src={imagine} alt='image' />
+              </div>
             </div>
-            <div className='border border-[#555454] rounded-lg px-20 py-[1.8rem] '>
+            {/* <div className='border border-[#555454] rounded-lg px-2 py-[1.8rem] '>
               <ul className='flex justify-between items-center'>
                 {Items.map((item, index) => (
                   <li
                     key={index}
-                    className={`px-10 py-3 rounded-3xl ${index === 0 ? backgroundColor : ' '}`}
+                    className={`px-1 py-3 rounded-3xl ${index === 0 ? backgroundColor : ' '}`}
                   >
                     {item}
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className='flex justify-between items-center gap-20 py-20'>
-              <Image src={Vfashion} alt='image' />
-              <div className='font-mono'>
-                <h1 className='text-[2.5rem] font-bold mb-10 '>Imagination takes center stage.</h1>
-                <p className='text-lg leading-7'>
+            </div> */}
+            <div className='flex flex-col md:flex-row justify-between items-center sm:py-20 my-20'>
+              <div className='md:w-[46%] '>
+                <Image src={Vfashion} alt='image' />
+              </div>
+              <div className='font-mono md:w-[46%] mt-8 sm:mt-0'>
+                <h1 className='text-[18px] sm:text-[2.5rem] font-bold mb-10 text-center md:text-left'>
+                  Imagination takes center stage.
+                </h1>
+                <p className='w-full text-[12px] text-lg leading-7 text-center md:text-left'>
                   We reimagine how fashion is created and experienced. Every design concept becomes
                   a reality in the digital realm breaking traditional boundaries!
                 </p>
@@ -113,22 +121,24 @@ const page = () => {
                 </p>
               </div>
             </div>
-            <div className='border border-[#555454] rounded-lg px-20 py-[1.8rem] '>
-              <ul className='flex justify-between items-center'>
+            {/* <div className='border border-[#555454] rounded-lg px-2 py-[1.8rem] '>
+              <ul className='flex flex-col md:flex-row justify-between items-center'>
                 {Items.map((item, index) => (
                   <li
                     key={index}
-                    className={`px-10 py-3 rounded-3xl ${index === 1 ? backgroundColor : ' '}`}
+                    className={`px-1 py-3 rounded-3xl ${index === 1 ? backgroundColor : ' '}`}
                   >
                     {item}
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className='flex justify-between items-center gap-20 py-20 '>
-              <div className='font-mono'>
-                <h1 className='text-[2.5rem] font-bold mb-10 '>Innovation meets imagination.</h1>
-                <p className='text-lg leading-7'>
+            </div> */}
+            <div className='flex flex-col md:flex-row justify-between items-center sm:py-20 my-20'>
+              <div className='font-mono md:w-[46%]'>
+                <h1 className='text-[18px] sm:text-[2.5rem] font-bold mb-10 text-center md:text-left'>
+                  Innovation meets imagination.
+                </h1>
+                <p className='w-full text-[12px] text-lg leading-7 text-center md:text-left'>
                   We build experiences that captivate audiences worldwide. We blend creativity and
                   technology to create unforgettable events that transport viewers to new
                   dimensions.!
@@ -139,18 +149,18 @@ const page = () => {
               </div>
               <Image src={VEnter} alt='image' />
             </div>
-            <div className='border border-[#555454] rounded-lg px-20 py-[1.8rem] '>
-              <ul className='flex justify-between items-center'>
+            {/* <div className='border border-[#555454] rounded-lg px-2 py-[1.8rem] '>
+              <ul className='flex flex-col md:flex-row justify-between items-center'>
                 {Items.map((item, index) => (
                   <li
                     key={index}
-                    className={`px-10 py-3 rounded-3xl ${index === 2 ? backgroundColor : ' '}`}
+                    className={`px-1 py-3 rounded-3xl ${index === 2 ? backgroundColor : ' '}`}
                   >
                     {item}
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
             <ContactUs />
             <Review />
             <Footer />
