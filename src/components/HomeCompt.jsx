@@ -1,32 +1,32 @@
-import React from "react";
-import Nav from "./Nav";
-import { Archivo_Black } from "next/font/google";
+import React from 'react';
+import Nav from './Nav';
+import { Archivo_Black } from 'next/font/google';
 
 const HomeCompt = ({ backgroundImage, name, description, btn1, btn2 }) => {
   return (
-    <div className="min-h-screen">
+    <div className='min-h-screen'>
       <div
-        className=" w-full"
+        className=' w-full'
         style={{
           backgroundImage: `url(${backgroundImage.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundColor: "#1E1E1E",
-          backgroundRepeat: "no-repeat",
-          aspectRatio: "2",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundColor: '#1E1E1E',
+          backgroundRepeat: 'no-repeat',
+          aspectRatio: '2',
         }}
       >
-        <div className="flex justify-center h-[100vh] items-center text-center">
-          <div className="mt-[10rem]">
-            <h1 className="text-[5.5rem] font-bold  mb-[8rem] tracking-widest">
+        <div className='flex justify-center h-[100vh] items-center text-center'>
+          <div className='mt-[10rem]'>
+            <h1 className='text-[24px] sm:text-[5.5rem] font-bold mb-[2px] sm:mb-[8rem] tracking-widest'>
               {name}
             </h1>
-            <p className="my-10 text-xl tracking-widest ">{description}</p>
-            <div className="flex justify-center gap-5">
-              <button className="py-3 px-[3rem] text-sm  rounded-3xl bg-[#03040998] tracking-widest">
+            <p className='w-full my-10 text-[12px] text-xl sm:tracking-widest '>{description}</p>
+            <div className='flex flex-col sm:flex-row justify-center gap-5'>
+              <button className='py-3 px-[3rem] text-sm  rounded-3xl bg-[#03040998] tracking-widest'>
                 {btn1}
               </button>
-              <button className="py-3 px-[3rem] text-sm rounded-3xl bg-[#03040998] tracking-widest">
+              <button className='py-3 px-[3rem] text-sm rounded-3xl bg-[#03040998] tracking-widest'>
                 {btn2}
               </button>
             </div>
