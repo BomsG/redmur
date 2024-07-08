@@ -35,14 +35,27 @@ const Page = () => {
           </h2>
 
           <Image src={video} alt="video" className="h-[500px]" />
+          {/* <video width={"100%"} height={"585px"} /> */}
 
-          <div className="grid grid-cols-3 grid-flow-col gap-4 mt-20">
+          {/* <div className="grid grid-cols-3 grid-flow-col gap-4  ">
             {item.map((item, index) => (
               <div>
                 <h2 className="bg-gradient-to-r from-[#060614] via-[#02011b] to-[#03012b] px-4 py-3 rounded-3xl text-center mb-5">
                   {item.header}
                 </h2>
                 <p className="bg-gradient-to-r from-[#060614] via-[#02011b] to-[#03012b] px-4 py-10 rounded-3xl text-[12px] leading-10">
+                  {item.paragraph}
+                </p>
+              </div>
+            ))}
+          </div> */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 grid-flow-co gap-4 my-20">
+            {item.map((item, index) => (
+              <div key={index} className="">
+                <h3 className="text-sm text-center tracking-widest font-bold py-5 bg-gradient-to-r from-[#060614] via-[#02011b] to-[#03012b] border border-[#7f7f7f7c] px-10  rounded-3xl mb-3">
+                  {item.header}
+                </h3>
+                <p className="text-[12px] py-10 leading-7 tracking-wide bg-gradient-to-r from-[#060614] via-[#02011b] to-[#03012b] px-10 rounded-2xl border border-[#7f7f7f7c] ">
                   {item.paragraph}
                 </p>
               </div>

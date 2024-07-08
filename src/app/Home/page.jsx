@@ -24,7 +24,7 @@ const page = () => {
   const Items = [
     { title: "VIRTUAL HUMAN", link: "/VirtualHuman" },
     { title: "VIRTUAL FASHION", link: "/VirtualFashion" },
-    { title: "VIRTUAL ENTERTAINMENT", link: "/VirtualEntertainment" },
+    { title: "VIRTUAL ENTERTAINMENT", link: "/Virtual_Entertainment" },
   ];
 
   const backgroundColor =
@@ -52,14 +52,16 @@ const page = () => {
         <PageWrapper>
           <div className="text-white relative z-50 overflow-hidden">
             <Header isScrolled={isScrolled} />
-            <HomeCompt
-              backgroundImage={moji}
-              name="MOJIRADE"
-              description="Nigeria's first virtual influencer and the beacon of digital
+            <Link href="/Mojirade">
+              <HomeCompt
+                backgroundImage={moji}
+                name="MOJIRADE"
+                description="Nigeria's first virtual influencer and the beacon of digital
               fashion"
-              btn1=" MEET MOJI"
-              btn2="JOIN WAITLIST"
-            />
+                btn1=" MEET MOJI"
+                btn2="JOIN WAITLIST"
+              />
+            </Link>
             <Link href="/Campaign">
               <HomeCompt
                 backgroundImage={OASIS}
@@ -85,10 +87,10 @@ const page = () => {
             <div>
               <div className="flex flex-col md:flex-row justify-between items-center sm:py-20 mb-20">
                 <div className="md:w-[46%]">
-                  <h1 className="text-[20px] sm:text-[2.5rem] font-[300] mb-10 text-center md:text-left ">
+                  <h1 className="text-[30px] sm:text-[2.5rem] font-bold mb-10 text-center md:text-left ">
                     Imagination Knows no bounds.
                   </h1>
-                  <p className="w-full  text-[16px] leading-8 text-center md:text-left">
+                  <p className="text-[12px] sm:text-[16px] leading-8 text-center md:text-left">
                     With our virtual humans, we redefine brand engagement and
                     storytelling where every interaction sparks excitement, and
                     where innovation is at its peak!
