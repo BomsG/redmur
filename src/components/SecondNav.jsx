@@ -15,9 +15,7 @@ const SecondNav = () => {
     }, 1000);
     return () => clearInterval(interval);
   }, []);
-
   const path = usePathname();
-
   const li = [
     {
       id: 1,
@@ -54,7 +52,7 @@ const SecondNav = () => {
 
       <ul className="hidden sm:flex items-center gap-5 text-[15px]">
         {li.map((li) => (
-          <li key={Item.id}>
+          <li key={li.id}>
             <motion.div whileHover={{ scale: 1.1 }} transition={{ delay: 0.2 }}>
               <Link
                 className={`${li.link === path ? "text-gray-500" : ""}`}

@@ -45,7 +45,7 @@ function page() {
             {item.map((item) => (
               <div key={item.id}>
                 <button className=" w-[80%] border border-[#7F7F7F] px-10 py-3 rounded-3xl my-10 text-xl tracking-wide">
-                  {item}
+                  {item.name}
                 </button>
               </div>
             ))}
