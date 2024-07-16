@@ -20,18 +20,22 @@ const SecondNav = () => {
 
   const li = [
     {
+      id: 1,
       name: "Campaigns",
       link: "/Campaign",
     },
     {
+      id: 2,
       name: "Brands",
       link: "/Brand",
     },
     {
+      id: 3,
       name: "About Us",
       link: "/About",
     },
     {
+      id: 4,
       name: "Media",
       link: "/Media",
     },
@@ -50,7 +54,7 @@ const SecondNav = () => {
 
       <ul className="hidden sm:flex items-center gap-5 text-[15px]">
         {li.map((li) => (
-          <li>
+          <li key={Item.id}>
             <motion.div whileHover={{ scale: 1.1 }} transition={{ delay: 0.2 }}>
               <Link
                 className={`${li.link === path ? "text-gray-500" : ""}`}

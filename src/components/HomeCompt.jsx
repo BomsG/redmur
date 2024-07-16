@@ -11,24 +11,23 @@ const HomeCompt = ({ backgroundImage, name, description, btn1, btn2 }) => {
           backgroundImage: `url(${backgroundImage.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundColor: "#1E1E1E",
           backgroundRepeat: "no-repeat",
           aspectRatio: "2",
         }}
       >
         <div className="flex justify-center h-[100vh] items-center text-center">
           <div className="mt-[10rem]">
-            <h1 className="text-[4rem] sm:text-[5.5rem] font-bold mb-[2px] sm:mb-[8rem] tracking-widest">
+            <h1 className="text-[4rem] mt-[30px] sm:text-[90px] font-extrabold  sm:mb-[8rem] tracking-widest">
               {name}
             </h1>
-            <p className="w-full my-10 text-l sm:text-xl  sm:tracking-widest ">
+            <p className="w-full text-l sm:text-xl font-bold sm:tracking-widest ">
               {description}
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-5 w-[70%] mx-auto">
-              <button className="py-3 px-[1rem] sm:px-[3rem] text-sm  rounded-3xl bg-[#03040998] tracking-widest">
+            <div className="flex flex-col mt-5 sm:flex-row justify-center gap-5  mx-auto">
+              <button className="py-3 px-[3rem] text-[20px]  font-bold rounded-3xl bg-[#03040998] tracking-widest">
                 {btn1}
               </button>
-              <button className="py-3 px-[3rem] text-sm rounded-3xl bg-[#03040998] tracking-widest">
+              <button className="py-3 px-[3rem] text-[20px] font-bold rounded-3xl bg-[#03040998] tracking-widest">
                 {btn2}
               </button>
             </div>

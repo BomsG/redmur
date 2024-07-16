@@ -9,27 +9,38 @@ import Ivie from "../../../public/images/Ivie.png";
 import Emmanuel from "../../../public/images/Emmanuel.png";
 import ContactUs from "../../components/ContactUs";
 import Footer from "../../components/Footer";
-import PageWrapper from "../page-wrapper";
+import PageWrapper from "../../components/page-wrapper";
+import Link from "next/link";
 
 const page = () => {
-  const Items = ["  VIRTUAL HUMAN", "FASHION", " VIRTUAL ENTERTAIMENT"];
+  // const Items = ["  VIRTUAL HUMAN", "FASHION", " VIRTUAL ENTERTAIMENT"];
+  const Items = [
+    { title: "VIRTUAL HUMAN", link: "/VirtualHuman", id: 1 },
+    { title: "VIRTUAL FASHION", link: "/VirtualFashion", id: 2 },
+    { title: "VIRTUAL ENTERTAINMENT", link: "/Virtual_Entertainment", id: 3 },
+  ];
+
   const values = [
     {
+      id: 1,
       header: "CREATIVITY",
       Paragraph:
         "We are intentional about fostering an environment that encourages and celebrates creativity, empowering our team and clients to think outside the box and push boundaries in media-tech innovation.",
     },
     {
+      id: 2,
       header: "COLLABORATION",
       Paragraph:
         "We cultivate a collaborative environment that encourages the exchange of ideas, expertise, and perspectives as fundamental to our success, both internally within the REDMUR team and externally with clients and partners.",
     },
     {
+      id: 3,
       header: "COMMUNITY",
       Paragraph:
         "We embrace a sense of community, within REDMUR and by actively contributing to the broader creative and media-tech communities. Build relationships that extend beyond projects, fostering a network of support and inspiration.",
     },
     {
+      id: 4,
       header: "CLIENT-FOCUS",
       Paragraph:
         "We prioritize the needs and goals of our clients, ensuring that every solution and service we provide is tailored to their unique requirements, leading to long-lasting and meaningful partnerships.",
@@ -78,12 +89,12 @@ const page = () => {
                     <ul className="flex justify-between items-center">
                       {Items.map((item, index) => (
                         <li
-                          key={index}
-                          className={`px-10 py-3 rounded-3xl ${
-                            index === 0 ? backgroundColor : " "
+                          key={item.id}
+                          className={`px-10 py-3 rounded-3xl text-[15px] ${
+                            index === 0 ? backgroundColor : ""
                           }`}
                         >
-                          {item}
+                          <Link href={item.link}>{item.title}</Link>
                         </li>
                       ))}
                     </ul>
@@ -103,8 +114,11 @@ const page = () => {
                     Values
                   </h2>
                   <div className="flex justify-between gap-4 ">
-                    {values.map((item, index) => (
-                      <div className="bg-gradient-to-r from-[#060614] via-[#02011b] to-[#03012b] py-3 px-3  w-[200px] h-[200px] py-auto rounded-md">
+                    {values.map((item) => (
+                      <div
+                        className="bg-gradient-to-r from-[#060614] via-[#02011b] to-[#03012b] py-3 px-3  w-[200px] h-[200px] py-auto rounded-md"
+                        key={item.id}
+                      >
                         <h2 className="text-[15px] text-gray-300">
                           {item.header}
                         </h2>

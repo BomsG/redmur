@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/VirtualHuman/page.jsx"  ],
+, "src/app/VirtualHuman/page.jsx", "src/components/Partners.tsx"  ],
   "exclude": [
     "node_modules"
   ]

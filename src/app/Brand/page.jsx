@@ -1,3 +1,4 @@
+"use client";
 import SecondNav from "../../components/SecondNav";
 import React from "react";
 import Image from "next/image";
@@ -5,7 +6,8 @@ import video from "../../../public/images/Video.png";
 import Review from "../../components/Review";
 import Footer from "../../components/Footer";
 import partners from "../../../public/images/Partners.png";
-import PageWrapper from "../page-wrapper";
+import PageWrapper from "../../components/page-wrapper";
+import Partners from "../../components/Partners";
 
 const Page = () => {
   const item = [
@@ -71,11 +73,6 @@ const Page = () => {
             </button>
           </div>
 
-          <Image
-            src={partners}
-            alt="image"
-            className="bg-gradient-to-r from-[#060614] via-[#02011b] to-[#03012b] px-3 my-20"
-          />
           <div className="mt-[30rem] ">
             <Footer />
           </div>

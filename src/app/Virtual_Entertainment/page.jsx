@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import SecondNav from "../../components/SecondNav";
 import Image from "next/image";
 import games from "../../../public/images/games.png";

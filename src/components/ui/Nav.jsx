@@ -42,40 +42,44 @@ export const Header = ({ isScrolled }) => {
   // const li = ["Campaigns", "Brands", "About Us", "Media"];
   const li = [
     {
+      id: 1,
       name: "Campaigns",
       link: "/Campaign",
     },
     {
+      id: 2,
       name: "Brands",
       link: "/Brand",
     },
     {
+      id: 3,
       name: "About Us",
       link: "/About",
     },
     {
+      id: 4,
       name: "Media",
       link: "/Media",
     },
   ];
 
   return (
-    <div className="fixed w-full mx-[100px]">
+    <div className="fixed w-full px-[100px]  border-b-[#1d1d1d]">
       <div className="block">
         <div
           className={`flex justify-between items-center  text-white font-[550] py-5 px-2 md:px-5 ${
-            isScrolled ? "backdrop-blur-sm bg-white/300" : "bg-transparent"
+            isScrolled ? "backdrop-blur-sm bg-white/300" : "bg-transparent "
           }`}
         >
           <Link href="/" className="flex md:ms-2 md:me-24 md:px-4 w-[100px]">
             <div className="font-bold flex items-center gap-1">
-              <Image src={redmur} width={100} height={50} alt="logo" />
+              <Image src={redmur} width={75} height={24} alt="logo" />
             </div>
           </Link>
 
           <ul className="hidden sm:flex items-center gap-5 text-[15px]">
             {li.map((li) => (
-              <li>
+              <li key={li.id}>
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ delay: 0.2 }}
@@ -102,9 +106,6 @@ export const Header = ({ isScrolled }) => {
           >
             <RiMenu2Fill />
           </button>
-          <button onClick={() => setOpen(!open)}>
-            <RiMenu2Fill />
-          </button>
         </div>
         {open && (
           <div className="fixed sm:hidde z-50 bg-white w-full h-full text-black top-0">
@@ -117,7 +118,7 @@ export const Header = ({ isScrolled }) => {
               </button>
               <ul className="flex flex-col items-center gap-3 text-sm text-black">
                 {li.map((li) => (
-                  <li>
+                  <li key={li.id}>
                     <motion.div whileHover={{ scale: 1.1 }}>{li}</motion.div>
                   </li>
                 ))}

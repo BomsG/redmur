@@ -11,3 +11,14 @@ body {
   background-position: center;
   background-size: cover;
 }
+.scroller {
+  animation: scroll 40% linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}

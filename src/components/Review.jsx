@@ -26,17 +26,17 @@ const Review = () => {
   return (
     <div className="text-center ">
       <div className="bg-gradient-to-r from-black  to-[#000000]">
-        <h3 className="py-10 tracking-widest font-bold">
+        <h3 className="py-10 text-[15px] tracking-widest font-bold">
           READ WHAT OTHERS HAVE TO SAY
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 grid-flow-co gap-4 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 grid-flow-co gap-4 my-10">
           {item.map((item, index) => (
             <div
               key={index}
-              className="bg-gradient-to-r from-[#060614] via-[#02011b] to-[#03012b] px-10 pt-3 pb-5 rounded-xl "
+              className="bg-gradient-to-r  from-[#050816] to-[#18123D] px-2 pt-3 pb-5 rounded-xl w-[255px] h-[257px]"
             >
-              <h3 className="text-sm font-bold py-5">{item.name}</h3>
-              <p className="text-[10px] leading-7 tracking-wide">
+              <h3 className="text-[15px] font-bold py-5">{item.name}</h3>
+              <p className="text-[10px] leading-9 tracking-widest">
                 {item.paragraph}
               </p>
             </div>

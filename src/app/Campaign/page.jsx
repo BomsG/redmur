@@ -5,7 +5,7 @@ import SecondNav from "../../components/SecondNav";
 import oasis from "../../../public/images/oasis2.png";
 import text from "../../../public/images/text.png";
 import Footer from "../../components/Footer";
-import PageWrapper from "../page-wrapper";
+import PageWrapper from "../../components/page-wrapper";
 
 const page = () => {
   return (
